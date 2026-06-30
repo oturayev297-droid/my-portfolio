@@ -1,0 +1,436 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - link "</ DEV.MASTER >" [ref=e6] [cursor=pointer]:
+        - /url: "#home"
+        - generic [ref=e7]: </
+        - generic [ref=e8]: DEV.MASTER
+        - generic [ref=e9]: ">"
+      - navigation [ref=e10]:
+        - link "Asosiy" [ref=e11] [cursor=pointer]:
+          - /url: "#home"
+        - link "Haqimda" [ref=e12] [cursor=pointer]:
+          - /url: "#about"
+        - link "Xizmatlar" [ref=e13] [cursor=pointer]:
+          - /url: "#services"
+        - link "Tajriba" [ref=e14] [cursor=pointer]:
+          - /url: "#experience"
+        - link "Loyihalar" [ref=e15] [cursor=pointer]:
+          - /url: "#projects"
+        - link "Aloqa" [ref=e16] [cursor=pointer]:
+          - /url: "#contact"
+        - generic [ref=e17]:
+          - link "UZ" [ref=e18] [cursor=pointer]:
+            - /url: /uz/
+          - generic [ref=e19]: "|"
+          - link "RU" [ref=e20] [cursor=pointer]:
+            - /url: /ru/
+          - generic [ref=e21]: "|"
+          - link "EN" [ref=e22] [cursor=pointer]:
+            - /url: /en/
+  - main [ref=e23]:
+    - generic [ref=e24]:
+      - generic [ref=e25]:
+        - paragraph [ref=e26]: Ozodbek Turayev
+        - heading "RAQAMLI SHEDEVRLAR YARATAMIZ" [level=1] [ref=e27]:
+          - text: RAQAMLI
+          - text: SHEDEVRLAR
+          - text: YARATAMIZ
+        - paragraph [ref=e28]: Men ajoyib vizual dizayn va mukammal arxitekturani o'zaro bog'layman. Python, Django va zamonaviy frontend texnologiyalari ustasiman.
+        - generic [ref=e29]:
+          - link "Barcha Loyihalar " [ref=e30] [cursor=pointer]:
+            - /url: "#projects"
+            - generic [ref=e31]: Barcha Loyihalar
+            - generic [ref=e32]: 
+          - link "Bog'lanish" [ref=e33] [cursor=pointer]:
+            - /url: "#contact"
+            - generic [ref=e34]: Bog'lanish
+      - generic [ref=e36]: 
+      - generic [ref=e38]: 
+      - generic [ref=e40]: 
+      - generic [ref=e42]: 
+      - generic [ref=e44]: 
+      - generic [ref=e46]: 
+    - generic [ref=e49]:
+      - generic [ref=e50]:
+        - text: PYTHON
+        - generic [ref=e51]: 
+      - generic [ref=e52]:
+        - text: DJANGO
+        - generic [ref=e53]: 
+      - generic [ref=e54]:
+        - text: JAVASCRIPT
+        - generic [ref=e55]: 
+      - generic [ref=e56]:
+        - text: REACT
+        - generic [ref=e57]: 
+      - generic [ref=e58]:
+        - text: BOOTSTRAP 5
+        - generic [ref=e59]: 
+      - generic [ref=e60]:
+        - text: SQL DATABASE
+        - generic [ref=e61]: 
+      - generic [ref=e62]:
+        - text: AI INTEGRATION
+        - generic [ref=e63]: 
+      - generic [ref=e64]:
+        - text: HTML5
+        - generic [ref=e65]: 
+      - generic [ref=e66]:
+        - text: CSS3
+        - generic [ref=e67]: 
+      - generic [ref=e68]:
+        - text: API DEVELOPMENT
+        - generic [ref=e69]: 
+      - generic [ref=e70]:
+        - text: UX/UI DESIGN
+        - generic [ref=e71]: 
+      - generic [ref=e72]:
+        - text: SWIFT IOS
+        - generic [ref=e73]: 
+      - generic [ref=e74]:
+        - text: PYTHON
+        - generic [ref=e75]: 
+      - generic [ref=e76]:
+        - text: DJANGO
+        - generic [ref=e77]: 
+      - generic [ref=e78]:
+        - text: JAVASCRIPT
+        - generic [ref=e79]: 
+      - generic [ref=e80]:
+        - text: REACT
+        - generic [ref=e81]: 
+      - generic [ref=e82]:
+        - text: BOOTSTRAP 5
+        - generic [ref=e83]: 
+      - generic [ref=e84]:
+        - text: SQL DATABASE
+        - generic [ref=e85]: 
+      - generic [ref=e86]:
+        - text: AI INTEGRATION
+        - generic [ref=e87]: 
+      - generic [ref=e88]:
+        - text: HTML5
+        - generic [ref=e89]: 
+      - generic [ref=e90]:
+        - text: CSS3
+        - generic [ref=e91]: 
+      - generic [ref=e92]:
+        - text: API DEVELOPMENT
+        - generic [ref=e93]: 
+      - generic [ref=e94]:
+        - text: UX/UI DESIGN
+        - generic [ref=e95]: 
+      - generic [ref=e96]:
+        - text: SWIFT IOS
+        - generic [ref=e97]: 
+    - generic [ref=e99]:
+      - generic [ref=e100]:
+        - img "Ozodbek Turayev" [ref=e102]
+        - generic [ref=e103]:
+          - heading "5+" [level=3] [ref=e104]
+          - paragraph [ref=e105]: Yillik Tajriba
+      - generic [ref=e106]:
+        - heading "Shunchaki Kod Yozishdan Narida" [level=2] [ref=e107]
+        - paragraph [ref=e108]: Qadimiy va navqiron Buxoro farzandi sifatidagi mas'uliyatni his etgan holda, 2023-yildan buyon raqamli dunyoda o'zligimni va professional cho'qqilarni zabt etib kelmoqdaman. Bugungi kunda Middle darajasidagi mutaxassis sifatida, jamoamiz bilan birga eng murakkab texnologik muammolarga ham mukammal yechimlar topishga qodirmiz.
+        - generic [ref=e109]:
+          - generic [ref=e110]:
+            - generic [ref=e111]: 50+
+            - paragraph [ref=e112]: Muvaffaqiyatli Loyihalar
+          - generic [ref=e113]:
+            - generic [ref=e114]: 500+
+            - paragraph [ref=e115]: Muvaffaqiyatli Shogirdlar
+          - generic [ref=e116]:
+            - generic [ref=e117]: 100+
+            - paragraph [ref=e118]: Sifat Kafolati
+    - generic [ref=e119]:
+      - generic [ref=e120]:
+        - heading "Mening Xizmatlarim" [level=2] [ref=e121]
+        - paragraph [ref=e122]: Muhim va to'liq yechimlarni taqdim etaman.
+      - generic [ref=e123]:
+        - generic [ref=e124]:
+          - generic [ref=e126]: 
+          - heading "Veb Dasturlash" [level=3] [ref=e127]
+          - paragraph [ref=e128]: Django qudrati va zamonaviy JS texnologiyalaridan foydalangan holda murakkab veb-saytlar qurish.
+        - generic [ref=e129]:
+          - generic [ref=e131]: 
+          - heading "Mobil Ilovalar" [level=3] [ref=e132]
+          - paragraph [ref=e133]: REST API bilan integratsiya qilingan eng sifatli hamda tezkor iOS va Android ilovalar.
+        - generic [ref=e134]:
+          - generic [ref=e136]: 
+          - heading "UI/UX Dizayn" [level=3] [ref=e137]
+          - paragraph [ref=e138]: Foydalanuvchilarni e'tiborini tortuvchi noodatiy shishali ko'rinish va jozibador interfeyslar chizish.
+        - generic [ref=e139]:
+          - generic [ref=e141]: 
+          - heading "AI & IT Mentorlik" [level=3] [ref=e142]
+          - paragraph [ref=e143]: Karyerasini boshlayotgan yoshlarga sun'iy intellektdan unumli foydalangan holda dasturlash muvaffaqiyat sirlarini o'rgatish.
+        - generic [ref=e144]:
+          - generic [ref=e146]: 
+          - heading "AI Integratsiyasi" [level=3] [ref=e147]
+          - paragraph [ref=e148]: Sun'iy intellekt qudrati bilan murakkab va professional darajadagi veb sayt hamda mobil ilovalarni kafolatlangan holda sifatli yaratib berish.
+        - generic [ref=e149]:
+          - generic [ref=e151]: 
+          - heading "Telegram Botlar" [level=3] [ref=e152]
+          - paragraph [ref=e153]: Biznesingizni avtomatlashtirish, xizmat ko'rsatishni yengillashtirish uchun foydali va sun'iy intellektga asoslangan aqlli Telegram botlar ishlab chiqish.
+    - generic [ref=e154]:
+      - generic [ref=e155]:
+        - heading "Loyiha Narxlari" [level=2] [ref=e156]
+        - paragraph [ref=e157]: Sizning vizyoningiz - Mening e'tiborimda.
+      - generic [ref=e158]:
+        - generic [ref=e159]:
+          - generic [ref=e161]: 
+          - heading "1 Sahifali Sayt" [level=3] [ref=e162]
+          - generic [ref=e163]: $500 - 1000$
+          - list [ref=e164]:
+            - listitem [ref=e165]:
+              - generic [ref=e166]: 
+              - text: Eksklyuziv UI/UX Dizayn
+            - listitem [ref=e167]:
+              - generic [ref=e168]: 
+              - text: Adaptiv (Mobile) versiya
+            - listitem [ref=e169]:
+              - generic [ref=e170]: 
+              - text: Animatsiyali elementlar
+            - listitem [ref=e171]:
+              - generic [ref=e172]: 
+              - text: Boshlang'ich SEO xizmati
+          - link "Buyurtma berish " [ref=e173] [cursor=pointer]:
+            - /url: "#contact"
+            - text: Buyurtma berish
+            - generic [ref=e174]: 
+        - generic [ref=e175]:
+          - generic [ref=e176]: Ommabop
+          - generic [ref=e178]: 
+          - heading "Sayt va Ilovalar" [level=3] [ref=e179]
+          - generic [ref=e180]: $300 - 10000+$
+          - list [ref=e181]:
+            - listitem [ref=e182]:
+              - generic [ref=e183]: 
+              - text: Xavfsiz Admin Panel
+            - listitem [ref=e184]:
+              - generic [ref=e185]: 
+              - text: Murakkab Ma'lumotlar Bazasi
+            - listitem [ref=e186]:
+              - generic [ref=e187]: 
+              - text: API Integratsiyalari
+            - listitem [ref=e188]:
+              - generic [ref=e189]: 
+              - text: Tayyor Mobil Ilova (iOS/Android)
+          - link "Buyurtma berish " [ref=e190] [cursor=pointer]:
+            - /url: "#contact"
+            - text: Buyurtma berish
+            - generic [ref=e191]: 
+        - generic [ref=e192]:
+          - generic [ref=e194]: 
+          - heading "Telegram Bot" [level=3] [ref=e195]
+          - generic [ref=e196]: $300 - 5000+$
+          - list [ref=e197]:
+            - listitem [ref=e198]:
+              - generic [ref=e199]: 
+              - text: AI (ChatGPT) Integratsiya
+            - listitem [ref=e200]:
+              - generic [ref=e201]: 
+              - text: To'lov tizimlari (Payme/Click)
+            - listitem [ref=e202]:
+              - generic [ref=e203]: 
+              - text: Statistika va Monitoring
+            - listitem [ref=e204]:
+              - generic [ref=e205]: 
+              - text: Guruh/Kanal boshqaruvi
+          - link "Buyurtma berish " [ref=e206] [cursor=pointer]:
+            - /url: "#contact"
+            - text: Buyurtma berish
+            - generic [ref=e207]: 
+    - generic [ref=e208]:
+      - heading "Bosib O'tgan Yo'lim" [level=2] [ref=e210]
+      - generic [ref=e211]:
+        - generic [ref=e214]:
+          - text: 2026 - Hozirgi kun
+          - heading "Middle AI & Mobile Innovator " [level=3] [ref=e215]:
+            - text: Middle AI & Mobile Innovator
+            - generic [ref=e216]: 
+          - paragraph [ref=e217]: Startuplar va Jamoaviy Loyihalar
+          - paragraph [ref=e218]: Sun'iy intellekt va murakkab dasturiy yechimlar olamida professional jamoa hamda tajribali mentorlar bilan hamkorlikda, iOS va Android platformalari uchun 100% samarali va innovatsion tizimlar yaratib kelmoqdaman.
+        - generic [ref=e221]:
+          - text: 2023 - 2026
+          - heading "Professional Faoliyat va Mentorlik " [level=3] [ref=e222]:
+            - text: Professional Faoliyat va Mentorlik
+            - generic [ref=e223]: 
+          - paragraph [ref=e224]: Toshkent, Samarqand, Buxoro
+          - paragraph [ref=e225]: Xususiy tashkilotlarda real loyihalar ustida ishladim, IT markazlarida dars berdim. Ko'plab shogirdlarim bor va bir qancha IT sertifikatlar sohibiman.
+        - generic [ref=e228]:
+          - text: 2022 - 2024
+          - heading "O'rganish va Ilk Qadamlar " [level=3] [ref=e229]:
+            - text: O'rganish va Ilk Qadamlar
+            - generic [ref=e230]: 
+          - paragraph [ref=e231]: Buxoro, Shaxsiy Rivojlanish
+          - paragraph [ref=e232]: 2022-yildan dasturlashni o'rganishni boshladim. 2023-yildan boshlab esa to'liq professional faoliyatimga start berdim.
+        - generic [ref=e235]:
+          - text: 2022 - 2023
+          - heading "UI/UX va Frontend Dasturchi " [level=3] [ref=e236]:
+            - text: UI/UX va Frontend Dasturchi
+            - generic [ref=e237]: 
+          - paragraph [ref=e238]: Startap Guruhlari
+          - paragraph [ref=e239]: Ilk loyihalarni vizual taraflama ideal qilish ustida ishlab bir qancha muvaffaqiyatlarga erishdik.
+    - generic [ref=e240]:
+      - heading "Saralangan Loyihalar" [level=2] [ref=e241]
+      - generic [ref=e242]:
+        - generic [ref=e243] [cursor=pointer]:
+          - img "Upgrade Tech Store" [ref=e245]
+          - generic [ref=e247]:
+            - text: E-Commerce
+            - heading "Upgrade Tech Store" [level=3] [ref=e248]
+            - paragraph [ref=e249]: Yuqori unumdorlikka ega kompyuter va gaming jihozlari uchun ixtisoslashgan onlayn do'kon.
+            - generic [ref=e250]:
+              - generic [ref=e251]: Django
+              - generic [ref=e252]: Python
+              - generic [ref=e253]: CSS3
+              - generic [ref=e254]: GSAP
+        - generic [ref=e255] [cursor=pointer]:
+          - img "Anor Travel" [ref=e257]
+          - generic [ref=e259]:
+            - text: Tourism
+            - heading "Anor Travel" [level=3] [ref=e260]
+            - paragraph [ref=e261]: O'zbekiston va Markaziy Osiyo bo'ylab premium turistik xizmatlar ko'rsatish platformasi.
+            - generic [ref=e262]:
+              - generic [ref=e263]: Django
+              - generic [ref=e264]: Python
+              - generic [ref=e265]: CSS3
+              - generic [ref=e266]: GSAP
+        - generic [ref=e267] [cursor=pointer]:
+          - img "IT Academy Catalog" [ref=e269]
+          - generic [ref=e271]:
+            - text: Ed-Tech
+            - heading "IT Academy Catalog" [level=3] [ref=e272]
+            - paragraph [ref=e273]: Professional dasturlash kurslarini boshqaruvchi va sotuvchi murakkab LMS tizimi.
+            - generic [ref=e274]:
+              - generic [ref=e275]: Django
+              - generic [ref=e276]: Python
+              - generic [ref=e277]: CSS3
+              - generic [ref=e278]: GSAP
+        - generic [ref=e279] [cursor=pointer]:
+          - img "Restaurantly" [ref=e281]
+          - generic [ref=e283]:
+            - text: Gastronomy
+            - heading "Restaurantly" [level=3] [ref=e284]
+            - paragraph [ref=e285]: Hashamatli restoranlar uchun onlayn menyu va stol band qilish (booking) tizimi.
+            - generic [ref=e286]:
+              - generic [ref=e287]: Django
+              - generic [ref=e288]: Python
+              - generic [ref=e289]: CSS3
+              - generic [ref=e290]: GSAP
+        - generic [ref=e291] [cursor=pointer]:
+          - img "HomeSpace" [ref=e293]
+          - generic [ref=e295]:
+            - text: Real Estate
+            - heading "HomeSpace" [level=3] [ref=e296]
+            - paragraph [ref=e297]: Ko'chmas mulkni ijaraga berish va sotish bo'yicha zamonaviy qidiruv portali.
+            - generic [ref=e298]:
+              - generic [ref=e299]: Django
+              - generic [ref=e300]: Python
+              - generic [ref=e301]: CSS3
+              - generic [ref=e302]: GSAP
+        - generic [ref=e303] [cursor=pointer]:
+          - img "Learner Platform" [ref=e305]
+          - generic [ref=e307]:
+            - text: Education
+            - heading "Learner Platform" [level=3] [ref=e308]
+            - paragraph [ref=e309]: Onlayn kurslar va masofaviy ta'limni tashkil etuvchi zamonaviy veb-platforma.
+            - generic [ref=e310]:
+              - generic [ref=e311]: Django
+              - generic [ref=e312]: Python
+              - generic [ref=e313]: CSS3
+              - generic [ref=e314]: GSAP
+      - paragraph [ref=e316]: Ko'p ishlarim bor lekin ishlarimni kiritish shart emas chunki sizga bu qiziq emas hozir qiladigan ishim qiziq axir
+    - generic [ref=e318]:
+      - generic [ref=e319]:
+        - heading "Keling, Bog'lanamiz" [level=2] [ref=e320]
+        - paragraph [ref=e321]: Miyangizda o'zgacha loyiha g'oyasi bormi? Uni real voqelikka aylantirishni menga qo'yib bering.
+        - generic [ref=e322]:
+          - link " Telegram @Turayevvv_Web " [ref=e323] [cursor=pointer]:
+            - /url: https://t.me/Turayevvv_Web
+            - generic [ref=e325]: 
+            - generic [ref=e326]:
+              - generic [ref=e327]: Telegram
+              - paragraph [ref=e328]: "@Turayevvv_Web"
+            - generic [ref=e329]: 
+          - generic [ref=e330] [cursor=pointer]:
+            - generic [ref=e332]: 
+            - generic [ref=e333]:
+              - generic [ref=e334]: Manzil
+              - paragraph [ref=e335]: O'zbekiston, Toshkent / Samarqand / Buxoro
+        - generic [ref=e336]: Hozir mavjud — yangi loyihalarga ochiqman!
+      - generic [ref=e339]:
+        - generic [ref=e340]:
+          - heading "Xabar Yuborish" [level=3] [ref=e341]
+          - paragraph [ref=e342]: Javob 24 soat ichida beriladi
+        - generic [ref=e343]:
+          - generic [ref=e344]:
+            - generic [ref=e345]:
+              - textbox [ref=e346]:
+                - /placeholder: " "
+              - generic: Ismingiz
+            - generic [ref=e347]:
+              - textbox [ref=e348]:
+                - /placeholder: " "
+              - generic: Telegram URL yoki Username
+          - generic [ref=e349]:
+            - textbox [ref=e350]:
+              - /placeholder: " "
+            - generic: Mavzu
+          - generic [ref=e351]:
+            - textbox [ref=e352]:
+              - /placeholder: " "
+            - generic: Sizning xabaringiz...
+          - button "Xabarni Yuborish " [ref=e353] [cursor=pointer]:
+            - generic [ref=e354]: Xabarni Yuborish
+            - generic [ref=e355]: 
+  - contentinfo [ref=e356]:
+    - generic [ref=e357]:
+      - generic [ref=e358]:
+        - link "TuraYev.Web" [ref=e359] [cursor=pointer]:
+          - /url: "#home"
+        - paragraph [ref=e360]: Zamonaviy veb-texnologiyalar orqali biznesingizni yangi bosqichga olib chiqamiz.
+      - generic [ref=e361]:
+        - heading "Bo'limlar" [level=5] [ref=e362]
+        - link "Asosiy" [ref=e363] [cursor=pointer]:
+          - /url: "#home"
+        - link "Haqimda" [ref=e364] [cursor=pointer]:
+          - /url: "#about"
+        - link "Xizmatlar" [ref=e365] [cursor=pointer]:
+          - /url: "#services"
+        - link "Tajriba" [ref=e366] [cursor=pointer]:
+          - /url: "#experience"
+        - link "Loyihalar" [ref=e367] [cursor=pointer]:
+          - /url: "#projects"
+        - link "Aloqa" [ref=e368] [cursor=pointer]:
+          - /url: "#contact"
+      - generic [ref=e369]:
+        - heading "Xizmatlar" [level=5] [ref=e370]
+        - link "Web Design" [ref=e371] [cursor=pointer]:
+          - /url: "#"
+        - link "Full-stack Dev" [ref=e372] [cursor=pointer]:
+          - /url: "#"
+        - link "Telegram Bots" [ref=e373] [cursor=pointer]:
+          - /url: "#"
+        - link "iOS / Android" [ref=e374] [cursor=pointer]:
+          - /url: "#"
+        - link "UI/UX Design" [ref=e375] [cursor=pointer]:
+          - /url: "#"
+        - link "Mentorlik" [ref=e376] [cursor=pointer]:
+          - /url: "#"
+      - generic [ref=e377]:
+        - heading "Aloqa" [level=5] [ref=e378]
+        - link " @Turayevvv_Web" [ref=e379] [cursor=pointer]:
+          - /url: https://t.me/Turayevvv_Web
+          - generic [ref=e380]: 
+          - text: "@Turayevvv_Web"
+        - link " Toshkent / Samarqand / Buxoro" [ref=e381] [cursor=pointer]:
+          - /url: "#"
+          - generic [ref=e382]: 
+          - text: Toshkent / Samarqand / Buxoro
+    - generic [ref=e383]:
+      - paragraph [ref=e384]: © 2026 Ozodbek Turayev. Barcha huquqlar himoyalangan.
+      - paragraph [ref=e385]: Python · Django · JavaScript · React
+  - button "" [ref=e386] [cursor=pointer]:
+    - generic [ref=e387]: 

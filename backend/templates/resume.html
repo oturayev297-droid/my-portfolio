@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="resume-sequence">
+    <h1 class="section-glitch">DATA_ARCHIVE: RESUME</h1>
+    
+    <div class="resume-grid">
+        <!-- Skills Radar / List -->
+        <div class="glass-box skills-box">
+            <h3>[ CORE_SKILLS ]</h3>
+            <ul class="skill-tags">
+                {% for skill in skills %}
+                <li class="skill-tag">{{ skill }}</li>
+                {% empty %}
+                <li class="skill-tag">Python / Django</li>
+                <li class="skill-tag">JavaScript / ThreeJS</li>
+                <li class="skill-tag">Advanced CSS / UI</li>
+                <li class="skill-tag">Algorithms & DSA</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <!-- Timeline -->
+        <div class="glass-box timeline-box">
+            <h3>[ EXPERIENCE_TIMELINE ]</h3>
+            <div class="timeline">
+                {% for exp in experiences %}
+                <div class="timeline-item hover-reveal">
+                    <h4>{{ exp.role }} <span class="highlight">@ {{ exp.company }}</span></h4>
+                    <p class="date">{{ exp.start_date }} - {% if exp.end_date %}{{ exp.end_date }}{% else %}PRESENT{% endif %}</p>
+                    <p class="desc">{{ exp.description }}</p>
+                </div>
+                {% empty %}
+                <!-- Dummy data fallback -->
+                <div class="timeline-item hover-reveal">
+                    <h4>Senior Developer <span class="highlight">@ Nexus Corp</span></h4>
+                    <p class="date">2023 - PRESENT</p>
+                    <p class="desc">Engineered high-concurrency microservices, integrated real-time graphics and highly interactive frontend experiences.</p>
+                </div>
+                <div class="timeline-item hover-reveal">
+                    <h4>Frontend Wizard <span class="highlight">@ Liquid Design</span></h4>
+                    <p class="date">2021 - 2023</p>
+                    <p class="desc">Created WebGL experiences and unusual user interfaces for enterprise clients.</p>
+                </div>
+                {% endfor %}
+            </div>
+            
+            <div class="download-cv action-area mt-4">
+               <a href="#" class="neon-button">DOWNLOAD_RAW_DATA (PDF)</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,14 @@
+.git
+__pycache__/
+*.pyc
+.env
+.venv
+venv/
+staticfiles/
+backend/db.sqlite3
+.gitignore
+*.md
+docs/
+frontend/
+shared/
+archive/

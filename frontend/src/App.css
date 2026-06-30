@@ -1,0 +1,61 @@
+.app {
+  position: relative;
+  min-height: 100vh;
+}
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-1);
+  z-index: 9999;
+  transform-origin: left;
+}
+
+.cursor-glow {
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(108,92,231,0.15), transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+  transition: left 0.3s ease, top 0.3s ease;
+}
+
+.space-background {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.space-background canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Keep cursor glow on top of 3D but below content */
+.cursor-glow {
+  z-index: 1;
+}
+
+main {
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .space-background {
+    opacity: 0.4;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .space-background {
+    display: none;
+  }
+}

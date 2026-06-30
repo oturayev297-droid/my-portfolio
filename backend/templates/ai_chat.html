@@ -1,0 +1,24 @@
+<div class="ai-widget" id="ai-widget">
+    <div class="ai-chat-window" id="ai-chat-window">
+        <div class="ai-chat-header">
+            <i class="fas fa-robot"></i>
+            <span>Ozodbek AI Assistant</span>
+            <div class="status"></div>
+            <button id="close-chat" style="background:none; border:none; color:#777; cursor:pointer;"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="ai-chat-messages" id="ai-chat-messages">
+            <!-- Initial Message -->
+            <div class="chat-msg bot">
+                Assalomu alaykum! Men Ozodbekning virtual yordamchisiman. Sizga qanday loyiha kerak? (Landing, E-commerce, Mobile App...)
+            </div>
+        </div>
+        <form class="ai-chat-input" id="ai-chat-form">
+            {% csrf_token %}
+            <input type="text" id="ai-input" placeholder="Xabaringizni yozing..." required autocomplete="off">
+            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+        </form>
+    </div>
+    <div class="ai-icon" id="ai-trigger">
+        <i class="fas fa-bolt"></i>
+    </div>
+</div>

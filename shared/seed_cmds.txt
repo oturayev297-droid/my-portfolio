@@ -1,0 +1,16 @@
+from portal.models import Project
+Project.objects.all().delete()
+projects_data = [
+    {"title": "Upgrade Tech Store", "cat": "E-Commerce", "desc": "Yuqori unumdorlikka ega kompyuter va gaming jihozlari do'koni.", "img": "Снимок экрана 2026-02-12 093740.png"},
+    {"title": "Anor Travel", "cat": "Tourism", "desc": "Markaziy Osiyo bo'ylab premium turistik xizmatlar platformasi.", "img": "Снимок экрана 2026-02-12 095756.png"},
+    {"title": "IT Academy Catalog", "cat": "Ed-Tech", "desc": "Professional dasturlash kurslarini boshqaruvchi LMS tizimi.", "img": "Снимок экрана 2026-02-12 094807.png"},
+    {"title": "Restaurantly", "cat": "Gastronomy", "desc": "Hashamatli restoranlar uchun onlayn stol band qilish tizimi.", "img": "Снимок экрана 2026-02-12 093047.png"},
+    {"title": "HomeSpace", "cat": "Real Estate", "desc": "Ko'chmas mulk ijarasi va savdosi bo'yicha qidiruv portali.", "img": "Снимок экрана 2026-02-12 093614.png"},
+    {"title": "Learner Platform", "cat": "Education", "desc": "Onlayn masofaviy ta'limni tashkil etuvchi veb-platforma.", "img": "Сniмок экрана 2026-02-12 093401.png"},
+    {"title": "Durdona Ceremony", "cat": "Events", "desc": "Tantanalar saroyi uchun mo'ljallangan bron qilish sayti.", "img": "Снимок экрана 2026-02-12 095022.png"},
+    {"title": "MultiShop Store", "cat": "Retail", "desc": "Universal e-commerce yechimi va kiyim-kechak do'koni.", "img": "Сniмок экрана 2026-02-12 100105.png"}
+]
+for p in projects_data:
+    Project.objects.create(title=p['title'], category=p['cat'], description=p['desc'], image_path='image/' + p['img'], tech_stack="Django, Python, CSS3, GSAP", link="#")
+print("DONE")
+exit()

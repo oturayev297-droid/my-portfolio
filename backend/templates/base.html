@@ -1,0 +1,144 @@
+{% load static i18n %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE|default:'uz' }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Portfolio Experience</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css">
+    
+    <!-- Core Styles -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}?v=5.0">
+</head>
+<body>
+
+    <!-- Animated Ambient Background -->
+    <div class="ambient-wrapper">
+        <div class="color-orb orb-1"></div>
+        <div class="color-orb orb-2"></div>
+        <div class="color-orb orb-3"></div>
+    </div>
+
+    <!-- Custom Animated Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="nav-wrapper">
+            <div class="logo">
+                <span>&lt;/</span> DEV.<span>MASTER &gt;</span>
+            </div>
+            <nav class="desktop-nav">
+                <a href="#home" class="nav-link">{% trans "Asosiy" %}</a>
+                <a href="#about" class="nav-link">{% trans "Haqimda" %}</a>
+                <a href="#services" class="nav-link">{% trans "Xizmatlar" %}</a>
+                <a href="#experience" class="nav-link">{% trans "Tajriba" %}</a>
+                <a href="#projects" class="nav-link">{% trans "Loyihalar" %}</a>
+                <a href="#contact" class="nav-link">{% trans "Aloqa" %}</a>
+                
+                <div class="lang-switcher" style="display: flex; gap: 0.5rem; align-items: center; margin-left: 1rem;">
+                    <a href="/uz/" style="color: white; text-decoration: none; font-size: 0.9rem;">UZ</a>
+                    <span style="color: gray;">|</span>
+                    <a href="/ru/" style="color: white; text-decoration: none; font-size: 0.9rem;">RU</a>
+                    <span style="color: gray;">|</span>
+                    <a href="/en/" style="color: white; text-decoration: none; font-size: 0.9rem;">EN</a>
+                </div>
+            </nav>
+            <button class="menu-btn" id="mobile-menu-btn">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu">
+        <button class="close-btn" id="close-menu-btn"><i class="fas fa-times"></i></button>
+        <nav class="mobile-nav">
+            <a href="#home" class="nav-link mobile-link">{% trans "Asosiy" %}</a>
+            <a href="#about" class="nav-link mobile-link">{% trans "Haqimda" %}</a>
+            <a href="#services" class="nav-link mobile-link">{% trans "Xizmatlar" %}</a>
+            <a href="#experience" class="nav-link mobile-link">{% trans "Tajriba" %}</a>
+            <a href="#projects" class="nav-link mobile-link">{% trans "Loyihalar" %}</a>
+            <a href="#contact" class="nav-link mobile-link">{% trans "Aloqa" %}</a>
+            <div style="margin-top: 2rem; display: flex; gap: 1rem; justify-content: center;">
+                <a href="/uz/" style="color: white; text-decoration: none; font-size: 1.5rem;">UZ</a>
+                <a href="/ru/" style="color: white; text-decoration: none; font-size: 1.5rem;">RU</a>
+                <a href="/en/" style="color: white; text-decoration: none; font-size: 1.5rem;">EN</a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Content Blocks -->
+    <main id="smooth-wrapper">
+        <div id="smooth-content">
+            {% block content %}{% endblock %}
+            
+            <!-- AI Assistant -->
+            {% include 'ai_chat.html' %}
+            
+            <footer class="pf-footer">
+                <div class="pf-footer-inner">
+                    <!-- Brand col -->
+                    <div class="pf-brand">
+                        <a href="#" class="pf-logo">Tura<span>Yev.Web</span></a>
+                        <p>{% trans "Zamonaviy veb-texnologiyalar orqali biznesingizni yangi bosqichga olib chiqamiz." %}</p>
+                        <!-- <div class="pf-social">
+                            <a href="https://t.me/Turayevvv_Web" target="_blank"><i class="fab fa-telegram"></i></a>
+                            <a href="https://instagram.com/turayevvv_004" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://github.com/oturayev297-droid" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        </div> -->
+                    </div>
+
+                    <!-- Nav col 1 -->
+                    <div class="pf-links-col">
+                        <h5>{% trans "Bo'limlar" %}</h5>
+                        <a href="#home">{% trans "Asosiy" %}</a>
+                        <a href="#about">{% trans "Haqimda" %}</a>
+                        <a href="#services">{% trans "Xizmatlar" %}</a>
+                        <a href="#experience">{% trans "Tajriba" %}</a>
+                        <a href="#projects">{% trans "Loyihalar" %}</a>
+                        <a href="#contact">{% trans "Aloqa" %}</a>
+                    </div>
+
+                    <!-- Nav col 2 -->
+                    <div class="pf-links-col">
+                        <h5>{% trans "Xizmatlar" %}</h5>
+                        <a href="#">Web Design</a>
+                        <a href="#">Full-stack Dev</a>
+                        <a href="#">Telegram Bots</a>
+                        <a href="#">iOS / Android</a>
+                        <a href="#">UI/UX Design</a>
+                        <a href="#">Mentorlik</a>
+                    </div>
+
+                    <!-- Contact col -->
+                    <div class="pf-links-col">
+                        <h5>{% trans "Aloqa" %}</h5>
+                        <a href="https://t.me/Turayevvv_Web" target="_blank"><i class="fab fa-telegram"></i> @Turayevvv_Web</a>
+                        <a href="#"><i class="fas fa-location-dot"></i> Toshkent / Samarqand / Buxoro</a>
+                    </div>
+                </div>
+
+                <!-- Bottom bar -->
+                <div class="pf-footer-bottom">
+                    <p>&copy; 2026 <span>Ozodbek Turayev</span>. {% trans "Barcha huquqlar himoyalangan." %}</p>
+                    <p>{% trans "Python · Django · JavaScript" %}</p>
+                </div>
+            </footer>
+        </div> <!-- #smooth-content -->
+    </main> <!-- #smooth-wrapper -->
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="{% static 'js/main.js' %}?v=2.0"></script>
+</body>
+</html>

@@ -1,0 +1,275 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-09 17:13+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+#: .\config\settings.py:65
+msgid "Uzbek"
+msgstr "Uzbek"
+
+#: .\config\settings.py:66
+msgid "Russian"
+msgstr "Russian"
+
+#: .\config\settings.py:67
+msgid "English"
+msgstr "English"
+
+#: .\templates\base.html:37 .\templates\base.html:62
+msgid "Asosiy"
+msgstr "Home"
+
+#: .\templates\base.html:38 .\templates\base.html:63
+msgid "Haqimda"
+msgstr "About"
+
+#: .\templates\base.html:39 .\templates\base.html:64
+msgid "Xizmatlar"
+msgstr "Services"
+
+#: .\templates\base.html:40 .\templates\base.html:65
+msgid "Tajriba"
+msgstr "Experience"
+
+#: .\templates\base.html:41 .\templates\base.html:66 .\templates\home.html:165
+msgid "Loyihalar"
+msgstr "Projects"
+
+#: .\templates\base.html:42 .\templates\base.html:67
+msgid "Aloqa"
+msgstr "Contact"
+
+#: .\templates\base.html:83
+msgid "AJOYIB LOYIHA"
+msgstr "WE CREATE"
+
+#: .\templates\base.html:83 .\templates\home.html:12
+msgid "YARATAMIZ"
+msgstr "MASTERPIECES"
+
+#: .\templates\base.html:92
+msgid "Mehr bilan yaratildi. Barcha huquqlar himoyalangan."
+msgstr "Created with love. All rights reserved."
+
+#: .\templates\home.html:8
+msgid "Assalomu alaykum, men Dasturchi va Dizaynerman"
+msgstr "Hello, I am a Developer and Designer"
+
+#: .\templates\home.html:10
+msgid "RAQAMLI"
+msgstr "DIGITAL"
+
+#: .\templates\home.html:11
+msgid "SHEDEVRLAR"
+msgstr "MASTERPIECES"
+
+#: .\templates\home.html:14
+msgid ""
+"Men ajoyib vizual dizayn va mukammal arxitekturani o'zaro bog'layman. "
+"Python, Django va zamonaviy frontend texnologiyalari ustasiman."
+msgstr ""
+
+#: .\templates\home.html:16
+msgid "Barcha Loyihalar"
+msgstr "All Projects"
+
+#: .\templates\home.html:17
+msgid "Bog'lanish"
+msgstr "Get in Touch"
+
+#: .\templates\home.html:68
+msgid "Yillik Tajriba"
+msgstr "Years Experience"
+
+#: .\templates\home.html:72
+msgid "Shunchaki"
+msgstr "More than"
+
+#: .\templates\home.html:72
+msgid "Kod Yozishdan"
+msgstr "just writing code"
+
+#: .\templates\home.html:72
+msgid "Narida"
+msgstr "today"
+
+#: .\templates\home.html:73
+msgid ""
+"Mening asosiy maqsadim aqlli platformalar va yuqori tezlikda ishlovchi "
+"ilovalar yaratish. Men shunchaki kod yozmayman, men to'liq raqamli ekotizim "
+"qanaqa bo'lishi kerakligini rejalashtiraman."
+msgstr ""
+
+#: .\templates\home.html:78
+msgid "Muvaffaqiyatli Loyihalar"
+msgstr "Successful Projects"
+
+#: .\templates\home.html:82
+msgid "O'qitilgan O'quvchilar"
+msgstr "Students Trained"
+
+#: .\templates\home.html:86
+msgid "Sifat Kafolati"
+msgstr "Quality Guarantee"
+
+#: .\templates\home.html:96
+msgid "Mening"
+msgstr "My"
+
+#: .\templates\home.html:96
+msgid "Xizmatlarim"
+msgstr "Services"
+
+#: .\templates\home.html:97
+msgid "Muhim va to'liq yechimlarni taqdim etaman."
+msgstr "Providing essential and complete solutions."
+
+#: .\templates\home.html:103
+msgid "Veb Dasturlash"
+msgstr "Web Development"
+
+#: .\templates\home.html:104
+msgid ""
+"Django qudrati va zamonaviy JS texnologiyalaridan foydalangan holda murakkab "
+"veb-saytlar qurish."
+msgstr ""
+
+#: .\templates\home.html:108
+msgid "Mobil Ilovalar"
+msgstr "Mobile Applications"
+
+#: .\templates\home.html:109
+msgid ""
+"REST API bilan integratsiya qilingan eng sifatli hamda tezkor iOS va Android "
+"ilovalar."
+msgstr ""
+
+#: .\templates\home.html:113
+msgid "UI/UX Dizayn"
+msgstr "UI/UX Design"
+
+#: .\templates\home.html:114
+msgid ""
+"Foydalanuvchilarni e'tiborini tortuvchi noodatiy shishali ko'rinish va "
+"jozibador interfeyslar chizish."
+msgstr ""
+
+#: .\templates\home.html:118
+msgid "Mentorlik"
+msgstr "Mentorship"
+
+#: .\templates\home.html:119
+msgid ""
+"Karyerasini endi boshlayotgan yoshlarga dasturlash olamidagi muvaffaqiyat "
+"sirlarini o'rgatish."
+msgstr ""
+
+#: .\templates\home.html:127
+msgid "Bosib O'tgan"
+msgstr "My"
+
+#: .\templates\home.html:127
+msgid "Yo'lim"
+msgstr "Journey"
+
+#: .\templates\home.html:133
+msgid "2023 - Hozirgi kun"
+msgstr "2023 - Present"
+
+#: .\templates\home.html:134
+msgid "Senior AI & Veb Dasturchi"
+msgstr "Senior AI & Web Developer"
+
+#: .\templates\home.html:135
+msgid "IT Akademik Yechimlar"
+msgstr "IT Academic Solutions"
+
+#: .\templates\home.html:136
+msgid ""
+"Minglab foydalanuvchilar ishlatsa ham sekinlashmaydigan yuqori "
+"murakkablikdagi tizimlarni joriy qildim."
+msgstr ""
+
+#: .\templates\home.html:144
+msgid "Full-Stack Veb Dasturchi"
+msgstr "Full-Stack Web Developer"
+
+#: .\templates\home.html:145
+msgid "Raqamli Avlod MChJ"
+msgstr "Digital Generation LLC"
+
+#: .\templates\home.html:146
+msgid ""
+"Ajoyib elektron tijorat portallari va biznesni avtomatlashtiruvchi backend "
+"kodlarini barpo etdim."
+msgstr ""
+
+#: .\templates\home.html:154
+msgid "UI/UX va Frontend Dasturchi"
+msgstr "UI/UX and Frontend Developer"
+
+#: .\templates\home.html:155
+msgid "Startap Guruhlari"
+msgstr "Startup Groups"
+
+#: .\templates\home.html:156
+msgid ""
+"Ilk loyihalarni vizual taraflama ideal qilish ustida ishlab bir qancha "
+"muvaffaqiyatlarga erishdik."
+msgstr ""
+
+#: .\templates\home.html:165
+msgid "Saralangan"
+msgstr "Featured"
+
+#: .\templates\home.html:185
+msgid "Tez orada loyihalar kiritiladi..."
+msgstr "Projects will be added soon..."
+
+#: .\templates\home.html:193
+msgid "Keling,"
+msgstr "Let's"
+
+#: .\templates\home.html:193
+msgid "Bog'lanamiz"
+msgstr "Connect"
+
+#: .\templates\home.html:194
+msgid ""
+"Miyangizda o'zgacha loyiha g'oyasi bormi? Uni real voqelikka aylantirishni "
+"menga qo'yib bering."
+msgstr ""
+
+#: .\templates\home.html:200
+msgid "Ismingiz"
+msgstr "Your Name"
+
+#: .\templates\home.html:204
+msgid "Elektron pochtangiz"
+msgstr "Your Email"
+
+#: .\templates\home.html:209
+msgid "Xabar Mavzusi"
+msgstr "Message Subject"
+
+#: .\templates\home.html:213
+msgid "Xabar Metni..."
+msgstr "Message Text..."
+
+#: .\templates\home.html:217
+msgid "Xabarni Yuborish"
+msgstr "Send Message"
