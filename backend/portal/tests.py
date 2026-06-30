@@ -17,7 +17,7 @@ class PortalViewsTestCase(TestCase):
             'subject': 'Test Subject',
             'message': 'This is a test message for contact form.'
         }
-        response = self.client.post(reverse('contact'), data)
+        response = self.client.post(reverse('api_contact'), data)
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.json()['status'], 'success')
         self.assertTrue(ContactMessage.objects.filter(full_name='Test User').exists())
@@ -30,7 +30,7 @@ class PortalViewsTestCase(TestCase):
             'subject': 'Test Subject',
             'message': 'short'
         }
-        response = self.client.post(reverse('contact'), data)
+        response = self.client.post(reverse('api_contact'), data)
         self.assertEqual(response.status_code, 400)
         self.assertEqual(response.json()['status'], 'error')
 
@@ -123,9 +123,9 @@ class PortalViewsTestCase(TestCase):
             'message': 'Test message body content here.'
         }
         for i in range(5):
-            resp = self.client.post(reverse('contact'), data)
+            resp = self.client.post(reverse('api_contact'), data)
             self.assertEqual(resp.status_code, 200)
-        resp = self.client.post(reverse('contact'), data)
+        resp = self.client.post(reverse('api_contact'), data)
         self.assertEqual(resp.status_code, 429)
 
 

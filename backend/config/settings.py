@@ -1,3 +1,4 @@
+import logging
 from pathlib import Path
 import os
 import sys
@@ -28,10 +29,14 @@ CSRF_TRUSTED_ORIGINS = [o.strip() for o in _csrf_origins.split(',') if o.strip()
 _cors_origins = os.environ.get('CORS_ALLOWED_ORIGINS', '')
 CORS_ALLOWED_ORIGINS = [o.strip() for o in _cors_origins.split(',') if o.strip()] if _cors_origins else []
 
-if not CORS_ALLOWED_ORIGINS and DEBUG:
+if not CORS_ALLOWED_ORIGINS:
     CORS_ALLOW_ALL_ORIGINS = True
-elif not CORS_ALLOWED_ORIGINS:
-    CORS_ALLOWED_ORIGINS = ['http://localhost:5173', 'http://localhost:3000']
+    if DEBUG:
+        print("⚠️ CORS: Barcha origin larga ruxsat berildi (DEBUG rejimi)")
+    else:
+        print("⚠️ CORS: CORS_ALLOWED_ORIGINS env o'rnatilmagan!")
+        print("   Production da barcha origin larga ruxsat berildi.")
+        print("   Railway env vars ga qo'shing: CORS_ALLOWED_ORIGINS=https://sizning.vercel.app")
 
 CORS_ALLOW_CREDENTIALS = True
 

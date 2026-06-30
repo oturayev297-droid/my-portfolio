@@ -92,6 +92,13 @@ def api_projects(request):
         data.append(p_data)
     return JsonResponse(data, safe=False)
 
+def api_experiences(request):
+    experiences = Experience.objects.all().order_by('-start_date').values(
+        'company', 'role', 'start_date', 'end_date', 'description'
+    )
+    return JsonResponse(list(experiences), safe=False)
+
+
 def home(request):
     projects = Project.objects.all()
     return render(request, 'home.html', {'projects': projects})
@@ -149,11 +156,13 @@ def contact_view(request):
 def ai_chat_handler(request):
     logger.info("ai_chat_handler called (method=%s)", request.method)
 
-    origin = request.META.get('HTTP_ORIGIN') or request.META.get('HTTP_REFERER', '')
     allowed_origins = getattr(settings, 'CORS_ALLOWED_ORIGINS', [])
-    if not any(o in origin for o in allowed_origins) and not settings.DEBUG:
-        logger.warning("Ruxsatsiz origin: %s", origin)
-        return JsonResponse({'error': 'Forbidden'}, status=403)
+    allow_all = getattr(settings, 'CORS_ALLOW_ALL_ORIGINS', False)
+    if not allow_all and not settings.DEBUG:
+        origin = request.META.get('HTTP_ORIGIN') or request.META.get('HTTP_REFERER', '')
+        if not origin or not any(o in origin for o in allowed_origins):
+            logger.warning("Ruxsatsiz origin: %s", origin)
+            return JsonResponse({'error': 'Forbidden'}, status=403)
 
     try:
         data = json.loads(request.body)
