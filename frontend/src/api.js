@@ -1,21 +1,29 @@
 const IS_DEV = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
-const PROD_API_URL = import.meta.env.VITE_API_URL || 'https://your-backend.railway.app'
+const PROD_API_URL = import.meta.env.VITE_API_URL || ''
 const BASE = IS_DEV ? '' : PROD_API_URL
 const LANG = '/uz'
 
-export async function fetchProjects() {
-  const res = await fetch(`${BASE}${LANG}/api/projects/`)
-  if (!res.ok) throw new Error('Failed to load projects')
-  return res.json()
+async function apiFetch(url, options = {}) {
+  const res = await fetch(`${BASE}${LANG}${url}`, {
+    ...options,
+    headers: {
+      'X-Requested-With': 'XMLHttpRequest',
+      ...options.headers,
+    },
+  })
+  const data = await res.json()
+  if (!res.ok) {
+    throw new Error(data.message || data.errors?.[Object.keys(data.errors)[0]]?.[0] || `Request failed (${res.status})`)
+  }
+  return data
 }
 
-export async function submitContact(data) {
-  const res = await fetch(`${BASE}${LANG}/contact/`, {
-    method: 'POST',
-    body: data,
-    headers: { 'X-Requested-With': 'XMLHttpRequest' },
-  })
-  return res.json()
+export async function fetchProjects() {
+  return apiFetch('/api/projects/')
+}
+
+export async function submitContact(formData) {
+  return apiFetch('/contact/', { method: 'POST', body: formData })
 }
 
 export async function aiChat(message, history = []) {
@@ -29,7 +37,5 @@ export async function aiChat(message, history = []) {
 }
 
 export async function fetchExperiences() {
-  const res = await fetch(`${BASE}${LANG}/resume/`)
-  if (!res.ok) throw new Error('Failed to load experiences')
-  return res.json()
+  return apiFetch('/resume/')
 }

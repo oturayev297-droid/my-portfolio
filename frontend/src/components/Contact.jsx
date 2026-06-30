@@ -23,10 +23,10 @@ export default function Contact() {
         setStatus({ type: 'success', text: t('contact.success') })
         setForm({ full_name: '', telegram: '', subject: '', message: '' })
       } else {
-        setStatus({ type: 'error', text: t('contact.error') })
+        setStatus({ type: 'error', text: res.message || t('contact.error') })
       }
-    } catch {
-      setStatus({ type: 'error', text: t('contact.error') })
+    } catch (err) {
+      setStatus({ type: 'error', text: err.message || t('contact.error') })
     }
     setLoading(false)
   }

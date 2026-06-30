@@ -71,8 +71,8 @@ def contact_view(request):
     form = ContactForm(request.POST)
     if form.is_valid():
         msg = form.save()
+        logger.info("Contact message saved from %s (telegram=%s, subject=%s)", msg.full_name, msg.telegram, msg.subject)
         
-        # Telegram Notification
         bot_token = getattr(settings, 'TELEGRAM_BOT_TOKEN', None)
         chat_id = getattr(settings, 'TELEGRAM_CHAT_ID', None)
         
@@ -85,16 +85,19 @@ def contact_view(request):
                 f"💬 <b>Xabar:</b>\n{msg.message}"
             )
             send_telegram_async(bot_token, chat_id, text, parse_mode='HTML')
+            logger.info("Telegram notification sent for contact from %s", msg.full_name)
                 
         return JsonResponse({
             'status': 'success', 
             'message': 'Xabaringiz muvaffaqiyatli yuborildi!'
         })
     
+    logger.warning("Contact form invalid: %s", form.errors)
+    first_error = next(iter(form.errors.values()))[0] if form.errors else 'Qatorlar to\'g\'ri to\'ldirilmagan.'
     return JsonResponse({
         'status': 'error', 
         'errors': form.errors, 
-        'message': 'Qatorlar to\'g\'ri to\'ldirilmagan.'
+        'message': first_error
     }, status=400)
 
 
