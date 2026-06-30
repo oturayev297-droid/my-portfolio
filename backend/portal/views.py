@@ -1,6 +1,5 @@
 import json
 import re
-import threading
 import logging
 import time
 import requests
@@ -40,29 +39,42 @@ def rate_limit(key_prefix, max_requests=10, window=60):
     return decorator
 
 
-def send_telegram_async(bot_token, chat_id, text, parse_mode='HTML'):
-    """Telegram xabarini background thread orqali yuboradi.
+def send_telegram_sync(bot_token, chat_id, text, parse_mode='HTML'):
+    """Telegram xabarini yuboradi. Synchronous — ishonchli, log to'liq.
     
-    TODO: Production da threading.Thread o'rniga Celery+Redis yoki Django-Q 
-    ishlatish tavsiya etiladi. Threading worker lar o'rtasida ishonchli emas
-    va xatoliklarni to'liq log qilish imkonini bermaydi.
+    Thread ishlatilmaydi, chunki gunicorn worker request tugagach
+    background thread ni ham tugatishi mumkin.
+    Bu call 1-2 soniya oladi, loading indicator bilan frontend da yashiriladi.
     """
-    def _send():
-        url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
-        try:
-            resp = requests.post(url, data={
-                'chat_id': chat_id,
-                'text': text,
-                'parse_mode': parse_mode
-            }, timeout=10)
-            if not resp.ok:
-                logger.error("Telegram API xatolik: %s - %s", resp.status_code, resp.text[:200])
-        except requests.RequestException as e:
-            logger.error("Telegram yuborishda xatolik: %s", e)
-        except Exception as e:
-            logger.error("Telegram yuborishda kutilmagan xatolik: %s", e, exc_info=True)
+    if not bot_token or not chat_id:
+        logger.error("Telegram: bot_token yoki chat_id yo'q! (token=%s, chat=%s)",
+                     bool(bot_token), bool(chat_id))
+        return False
 
-    threading.Thread(target=_send, daemon=True).start()
+    url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
+    payload = {
+        'chat_id': chat_id,
+        'text': text,
+        'parse_mode': parse_mode,
+    }
+
+    try:
+        resp = requests.post(url, json=payload, timeout=10)
+        resp.raise_for_status()
+        logger.info("Telegram xabar yuborildi: %s", resp.status_code)
+        return True
+    except requests.exceptions.Timeout:
+        logger.error("Telegram: so'rov vaqti tugadi (timeout) — payload: %.100s", text)
+    except requests.exceptions.HTTPError as e:
+        logger.error("Telegram API xatosi: %s, response: %.200s", e, getattr(resp, 'text', 'N/A'))
+    except requests.exceptions.ConnectionError as e:
+        logger.error("Telegram: ulanish xatosi (DNS/proxy): %s", e)
+    except requests.exceptions.RequestException as e:
+        logger.error("Telegram so'rovida xatolik: %s", e)
+    except Exception as e:
+        logger.error("Telegram kutilmagan xatolik: %s", e, exc_info=True)
+
+    return False
 
 
 def api_projects(request):
@@ -115,8 +127,7 @@ def contact_view(request):
                 f"📝 <b>Mavzu:</b> {msg.subject}\n\n"
                 f"💬 <b>Xabar:</b>\n{msg.message}"
             )
-            send_telegram_async(bot_token, chat_id, text, parse_mode='HTML')
-            logger.info("Telegram notification sent for contact from %s", msg.full_name)
+            send_telegram_sync(bot_token, chat_id, text, parse_mode='HTML')
                 
         return JsonResponse({
             'status': 'success', 
@@ -189,7 +200,7 @@ def ai_chat_handler(request):
                                 f"📁 *Loyiha:* {order.project_brief}\n\n"
                                 f"🤖 _Gemini AI orqali suhbat yakunlandi._"
                             )
-                            send_telegram_async(bot_token, chat_id, text, parse_mode='Markdown')
+                            send_telegram_sync(bot_token, chat_id, text, parse_mode='Markdown')
                     except Exception as e:
                         logger.error("Lead saqlash xatosi: %s", e, exc_info=True)
 

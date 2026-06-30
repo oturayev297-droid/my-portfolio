@@ -9,7 +9,7 @@ class PortalViewsTestCase(TestCase):
     def setUp(self):
         self.client = Client()
 
-    @patch('portal.views.send_telegram_async')
+    @patch('portal.views.send_telegram_sync')
     def test_contact_view_valid(self, mock_send_telegram):
         data = {
             'full_name': 'Test User',
@@ -35,7 +35,7 @@ class PortalViewsTestCase(TestCase):
         self.assertEqual(response.json()['status'], 'error')
 
     @patch('portal.ai_service.FallbackAssistant.chat')
-    @patch('portal.views.send_telegram_async')
+    @patch('portal.views.send_telegram_sync')
     def test_ai_chat_handler_not_finalized(self, mock_send_telegram, mock_ai_chat):
         mock_ai_chat.return_value = ("Salom! Qanday yordam bera olaman?", False)
         payload = {'message': 'Salom', 'history': []}
@@ -52,7 +52,7 @@ class PortalViewsTestCase(TestCase):
         mock_send_telegram.assert_not_called()
 
     @patch('portal.ai_service.FallbackAssistant.chat')
-    @patch('portal.views.send_telegram_async')
+    @patch('portal.views.send_telegram_sync')
     def test_ai_chat_handler_finalized(self, mock_send_telegram, mock_ai_chat):
         lead_meta = '###LEAD_DATA={"name": "Mijoz Nom", "brief": "Landing page loyihasi", "finalized": true}###'
         mock_ai_chat.return_value = (f"Rahmat! Ma'lumotlarni oldim.\n{lead_meta}", True)

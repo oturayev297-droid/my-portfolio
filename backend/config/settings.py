@@ -194,8 +194,9 @@ if not DEBUG:
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # ---------- TELEGRAM ----------
-TELEGRAM_BOT_TOKEN = os.environ.get('TELEGRAM_BOT_TOKEN', '')
-TELEGRAM_CHAT_ID = os.environ.get('TELEGRAM_CHAT_ID', '')
+# Default None — env da bo'lmasa, kod xatolik log qiladi (sokin ishlamay qolmaslik uchun)
+TELEGRAM_BOT_TOKEN = os.environ.get('TELEGRAM_BOT_TOKEN') or None
+TELEGRAM_CHAT_ID = os.environ.get('TELEGRAM_CHAT_ID') or None
 
 # ---------- AI ----------
 GEMINI_API_KEY = os.environ.get('GEMINI_API_KEY', '')
