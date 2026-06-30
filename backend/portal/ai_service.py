@@ -1,6 +1,14 @@
 import json
 import re
+import logging
 from django.conf import settings
+
+logger = logging.getLogger(__name__)
+
+try:
+    from google import genai
+except ImportError:
+    genai = None
 
 FALLBACK_RESPONSES = {
     'salom': "Assalomu alaykum! Men Ozodbekning virtual yordamchisiman. Sizga qanday loyiha kerak? (Landing, E-commerce, Mobile App...)",
@@ -113,12 +121,15 @@ class FallbackAssistant:
 
     def _init_gemini(self):
         api_key = getattr(settings, 'GEMINI_API_KEY', '')
-        if api_key:
+        if api_key and genai:
             try:
-                from google import genai
-                self.client = genai.Client(api_key=api_key)
+                self.client = genai.Client(
+                    api_key=api_key,
+                    http_options={"timeout": 10000},
+                )
                 self.model_name = "gemini-2.0-flash"
-            except Exception:
+            except Exception as e:
+                logger.warning("Gemini init xatolik: %s", e)
                 self.client = None
 
     def get_system_prompt(self):

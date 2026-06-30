@@ -1,4 +1,4 @@
-import { useRef, useMemo, useState, useCallback } from 'react'
+import { useRef, useMemo, useState, useCallback, forwardRef } from 'react'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import * as THREE from 'three'
 
@@ -765,7 +765,7 @@ function FloatingSnippets() {
   )
 }
 
-const FloatingSnippet = ({ text, position, color, size }) => {
+const FloatingSnippet = forwardRef(({ text, position, color, size }, ref) => {
   const texture = useMemo(() => {
     const canvas = document.createElement('canvas')
     canvas.width = 128
@@ -793,7 +793,7 @@ const FloatingSnippet = ({ text, position, color, size }) => {
   }, [text, color])
 
   return (
-    <sprite position={position} scale={[size * 2, size * 0.6, 1]}>
+    <sprite ref={ref} position={position} scale={[size * 2, size * 0.6, 1]}>
       <spriteMaterial
         map={texture}
         transparent
@@ -804,7 +804,7 @@ const FloatingSnippet = ({ text, position, color, size }) => {
       />
     </sprite>
   )
-}
+})
 
 // ─── Camera Orbit ────────────────────────────────────────────
 function CameraController() {

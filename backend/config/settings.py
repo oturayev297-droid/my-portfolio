@@ -19,6 +19,9 @@ if not SECRET_KEY:
 
 ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', 'localhost,127.0.0.1,.railway.app,.vercel.app').split(',')
 
+if not DEBUG and ('*' in ALLOWED_HOSTS or '' in ALLOWED_HOSTS):
+    raise RuntimeError("ALLOWED_HOSTS da '*' yoki bo'sh qiymat production da ruxsat etilmaydi!")
+
 _csrf_origins = os.environ.get('CSRF_TRUSTED_ORIGINS', '')
 CSRF_TRUSTED_ORIGINS = [o.strip() for o in _csrf_origins.split(',') if o.strip()] if _csrf_origins else []
 
@@ -79,11 +82,11 @@ TEMPLATES = [
 WSGI_APPLICATION = 'config.wsgi.application'
 
 # ---------- DATABASE ----------
-DATABASE_URL = os.environ.get('DATABASE_URL')
-if DATABASE_URL and 'test' not in sys.argv:
+# Railway DATABASE_URL avtomatik qo'yiladi
+if os.environ.get('DATABASE_URL') and 'test' not in sys.argv:
     import dj_database_url
     DATABASES = {
-        'default': dj_database_url.config(default=DATABASE_URL, conn_max_age=600, conn_health_checks=True)
+        'default': dj_database_url.config(conn_max_age=600, conn_health_checks=True)
     }
 elif os.environ.get('DB_NAME') and 'test' not in sys.argv:
     DATABASES = {

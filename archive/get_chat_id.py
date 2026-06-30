@@ -1,19 +1,20 @@
 # -*- coding: utf-8 -*-
-"""
-Telegram Chat ID auto-detector.
-Run this script, send /start to your bot, and it will save your Chat ID to .env
-"""
 import sys
 import io
-import urllib.request
-import json
 import os
+import json
+import urllib.request
+import urllib.parse
 
-# Force UTF-8 output for Windows
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
-BOT_TOKEN = "8573778865:AAFvqx0wNLXUV7Jf-cfhe4GXhADWO1KGtnU"
-ENV_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env")
+BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN")
+if not BOT_TOKEN:
+    print("XATOLIK: TELEGRAM_BOT_TOKEN environment variable o'rnatilmagan!")
+    print("Ishlatish: set TELEGRAM_BOT_TOKEN=your_token_here && python get_chat_id.py")
+    sys.exit(1)
+
+ENV_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "backend", ".env")
 
 print("=" * 50)
 print("Telegram Chat ID Detector")
@@ -36,13 +37,11 @@ try:
             if chat_id:
                 print(f"Chat ID topildi: {chat_id} ({first_name})")
 
-                # Read current .env
                 env_content = ""
                 if os.path.exists(ENV_FILE):
-                    with open(ENV_FILE, "r") as f:
+                    with open(ENV_FILE, "r", encoding="utf-8") as f:
                         env_content = f.read()
 
-                # Replace or add TELEGRAM_CHAT_ID
                 if "TELEGRAM_CHAT_ID=" in env_content:
                     lines = env_content.splitlines()
                     new_lines = []
@@ -55,12 +54,11 @@ try:
                 else:
                     env_content += f"\nTELEGRAM_CHAT_ID={chat_id}"
 
-                with open(ENV_FILE, "w") as f:
+                with open(ENV_FILE, "w", encoding="utf-8") as f:
                     f.write(env_content)
 
                 print(f".env faylga yozildi: TELEGRAM_CHAT_ID={chat_id}")
 
-                # Send confirmation to user via Telegram
                 msg = "Portfolio saytingizdan xabarlar endi shu chatga yetib keladi!"
                 send_url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
                 payload = json.dumps({
@@ -76,7 +74,6 @@ try:
                 break
     else:
         print("Hech qanday xabar topilmadi. Botga /start yozdingizmi?")
-        print("Qaytadan ishga tushiring.")
 
 except Exception as e:
     print(f"Xatolik: {e}")
